@@ -61,7 +61,7 @@ router.post('/new', function(req, res, next) {
         url: 'http://localhost:3000/Posts',
         body: obj,
         json: true
-    }, function (error, responsive, body) {
+    }, function (error, response, body) {
         //refresh page after sending data
         res.redirect('/new');
     });
@@ -99,7 +99,7 @@ router.post('/edit/:id', function(req, res, next) {
         url: 'http://localhost:3000/Posts/' + req.params.id,
         body: obj,
         json: true
-    }, function (error, responsive, body) {
+    }, function (error, response, body) {
         //refresh page after sending data
         res.redirect('/');
     });
@@ -116,7 +116,7 @@ router.post('/delete/:id', function(req, res, next) {
     request.delete( {
         url: 'http://localhost:3000/Posts/' + req.params.id,
         json: true
-    }, function (error, responsive, body) {
+    }, function (error, response, body) {
         //refresh page after sending data
         res.redirect('/');
     });
