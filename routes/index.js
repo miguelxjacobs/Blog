@@ -9,7 +9,7 @@ var Posts = require('../db.json');
 // GET homepage
 router.get('/', function(req, res, next) {
     router.get('http://localhost:3000/Posts',)
-    res.render('index', {title: 'My Favourite Games', post: Posts.Posts});
+    res.render('index', {title: 'My Favourite Games', post:Posts.Posts});
 });
 
 //GET archive page
@@ -24,19 +24,19 @@ router.get('/posts', function(req, res, next) {
 
 //GET new page
 router.get('/new', function(req, res, next) {
-    res.render('new', {title: 'New', posts: Posts.Posts});
+    res.render('new', {title: 'New', posts:Posts.Posts});
 });
 
 //GET readMore page
 router.get('/more', function(req, res, next) {
     router.get('http://localhost:3000/Posts',)
-    res.render('index', {title: 'The full story...', post: Posts.Posts});
+    res.render('index', {title: 'The full story...', post:Posts.Posts});
 });
 
 router.get('/more/:id', function(req, res, next) {
     let path = req.path;
     let val = path.slice(-1);
-    res.render('more', {title: 'more', post: Posts.Posts[val - 1]});
+    res.render('more', {title: 'more', post:Posts.Posts[val - 1]});
 });
 
 //POST new blog
@@ -108,7 +108,7 @@ router.post('/edit/:id', function(req, res, next) {
 // GET delete page
 router.get('/delete/:id', function(req, res, next) {
     router.get('http://localhost:3000/Posts',)
-    res.render('delete', {title: 'My Favourite Games', post: Posts.Posts});
+    res.render('delete', {title: 'My Favourite Games', post:Posts.Posts});
 });
 
 //DELETE post

@@ -59,7 +59,7 @@ div{
 }
 
 .content-body {
-  background-color: black;
+  background-color: white !important;
 }
 
 .panel-heading {
