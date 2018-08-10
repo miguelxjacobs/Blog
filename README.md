@@ -2,5 +2,6 @@
 
 To initialize use:
 
-nodemon start
-json-server --watch db.json --port 5000
+> nodemon start
+
+> json-server --watch db.json --port 5000
